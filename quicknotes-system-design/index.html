@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes System Design - API Client</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>QuickNotes API Client</h1>
+    <p>Live frontend connected to the backend practice API service</p>
+  </header>
+
+  <main>
+    <!-- Section 1: Create Note Form -->
+    <section class="card">
+      <h2>Create New Note</h2>
+      <form id="note-form">
+        <div class="form-group">
+          <label for="title-input">Title (Required, max 100 characters):</label>
+          <input type="text" id="title-input" placeholder="Note Title..." required maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="body-input">Body (Optional):</label>
+          <textarea id="body-input" placeholder="Type your note content here..."></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">Add Note</button>
+      </form>
+    </section>
+
+    <!-- Section 2: Notes List & Controls -->
+    <section class="card">
+      <div class="controls-header">
+        <h2>Remote Notes</h2>
+        <button id="load-btn">Load Notes</button>
+      </div>
+
+      <p id="status"></p>
+
+      <ul id="notes-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 QuickNotes. Built for Scalable Enterprise Cloud Architecture.</p>
+  </footer>
+
+</body>
+</html>
